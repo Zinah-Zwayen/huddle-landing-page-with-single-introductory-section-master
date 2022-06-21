@@ -1,0 +1,152 @@
+
+/* Start Global Rules */
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--Violet);
+    background-image: url(images/bg-mobile.svg);
+    background-position: cover;
+    background-repeat: no-repeat;
+}
+/* ### Headings
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 600
+
+### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400 */
+
+/* End Global Rules */
+/* Start Landing Page */
+.container{
+    margin-inline: 30px;   
+}
+.header-logo {
+    margin: 40px 0 60px 0;
+}
+.header-logo img{
+    width: 150px;
+}
+.image img{
+    max-width: 100%;   
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 30px;
+}
+.content p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 20px 15px;
+    line-height: 25px;
+}
+button{
+    padding: 15px 90px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    color: var(--Violet);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button:hover{
+    background-color: var(--Soft-Magenta);
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.social{
+    margin: 50px 0;
+}
+.social ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social ul li{
+    list-style: none;
+    color: white;
+    padding: 10px;
+}
+.social ul li:hover{
+    color: var(--Soft-Magenta);
+    cursor: pointer;
+}
+/* End Landing Page */
+/* Start Media Queries */
+@media (min-width: 992px){
+    body{
+        background-image: url(images/bg-desktop.svg);
+    }
+    .container{
+        margin-inline: 50px;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .image{
+        align-self: center;
+        padding-top: 100px;
+        
+    }
+    .content{
+        align-self:flex-start;
+        align-items: flex-start;
+        padding: 40px;
+        text-align: left;
+        margin: 0 10px ;
+    }
+    .content h1{
+        font-size: 28px;
+        margin-top: 100px;
+    }
+    .content p{
+        margin: 30px 0;
+    }
+    button{
+        padding: 15px 70px;
+    }
+    .social{
+        grid-column: 2;
+    }
+    .social ul{
+        justify-content: right;
+    }
+}
+/* End Media Queries */
+/* Start Footer */
+    .attribution { 
+        font-size: 11px;
+         text-align: center;
+        }
+    .attribution a { 
+        color: hsl(228, 45%, 44%);
+     }
+/* End Footer */
+
